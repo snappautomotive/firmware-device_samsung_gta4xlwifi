@@ -19,6 +19,29 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- AAOS definitions -->
+  <!-- Up to 8 users -->
+  <bool name="config_enableMultiUserUI">true</bool>
+  <integer name="config_multiuserMaximumUsers">8</integer>
+
+  <!-- Data terminal only -->
+  <bool name="config_voice_capable">false</bool>
+  <bool name="config_sms_capable">false</bool>
+
+  <!-- No hardware nav keys -->
+  <bool name="config_showNavigationBar">true</bool>
+
+  <!-- Force to landscape -->
+  <bool name="config_forceDefaultOrientation">true</bool>
+
+  <!-- Control the default night mode to use when there is no other mode override set.
+       One of the following values (see UiModeManager.java):
+           0 - MODE_NIGHT_AUTO
+           1 - MODE_NIGHT_NO
+           2 - MODE_NIGHT_YES
+  -->
+  <integer name="config_defaultNightMode">2</integer>
+
     <!-- Flag indicating whether the current device is "voice capable".
          If true, this means that the device supports circuit-switched
          (i.e. voice) phone calls over the telephony network, and is
