@@ -24,10 +24,6 @@
   <bool name="config_enableMultiUserUI">true</bool>
   <integer name="config_multiuserMaximumUsers">8</integer>
 
-  <!-- Data terminal only -->
-  <bool name="config_voice_capable">false</bool>
-  <bool name="config_sms_capable">false</bool>
-
   <!-- No hardware nav keys -->
   <bool name="config_showNavigationBar">true</bool>
 
