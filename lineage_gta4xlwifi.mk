@@ -18,6 +18,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# Inherit Snapp modifications
+$(call inherit-product, device/snappautomotive/common/additions.mk)
+
+# Inherit the car stuff
+$(call inherit-product, device/samsung/gta4xlwifi/car.mk)
+
 ## Inherit from gta4xlwifi device
 $(call inherit-product, device/samsung/gta4xlwifi/device.mk)
 
