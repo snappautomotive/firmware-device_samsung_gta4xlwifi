@@ -14,23 +14,24 @@
 # limitations under the License.
 #
 
+## Inherit from gta4xlwifi device
+$(call inherit-product, device/samsung/gta4xlwifi/device.mk)
+
 ## Inherit from generic products, most specific first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-## Inherit from gta4xlwifi device
-$(call inherit-product, device/samsung/gta4xlwifi/device.mk)
+## Inherit AAOS build
+$(call inherit-product, packages/services/Car/car_product/build/car.mk)
 
-## Boot Animation
-TARGET_BOOTANIMATION_HALF_RES := true
-TARGET_SCREEN_HEIGHT := 2000
-TARGET_SCREEN_WIDTH := 1200
+## Inherit Snapp modifications
+$(call inherit-product, device/snappautomotive/common/additions.mk)
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_mini_tablet_wifionly.mk)
 
 ## Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := gta4xlwifi
