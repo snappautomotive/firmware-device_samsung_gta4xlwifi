@@ -74,4 +74,7 @@
         <item>"0,1"</item>
     </string-array>
 
+    <!-- Force to landscape -->
+    <bool name="config_forceDefaultOrientation">true</bool>
+
 </resources>
