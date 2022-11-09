@@ -26,15 +26,15 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2000
 TARGET_SCREEN_WIDTH := 1200
 
+# Inherit Snapp modifications
+$(call inherit-product, device/snappautomotive/common/additions.mk)
+
 ## Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_car.mk)
 $(call inherit-product, device/lineage/car/lineage_car_vendor.mk)
-
-# Inherit Snapp modifications
-$(call inherit-product, device/snappautomotive/common/additions.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := gta4xlwifi
