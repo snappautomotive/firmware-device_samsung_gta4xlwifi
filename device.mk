@@ -24,4 +24,6 @@ $(call inherit-product, vendor/samsung/gta4xlwifi/gta4xlwifi-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+        SnappCarFrameworkOverlay
+        SnappCarSettingsProviderOverlay

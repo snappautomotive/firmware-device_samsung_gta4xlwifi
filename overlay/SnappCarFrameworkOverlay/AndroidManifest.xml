@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.snappautomotive.overlay.framework"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <application android:hasCode="false" />
+    <overlay
+        android:targetPackage="android"
+        android:priority="-1"
+        android:isStatic="true" />
+</manifest>

@@ -1,0 +1,8 @@
+
+runtime_resource_overlay {
+    name: "SnappCarFrameworkOverlay",
+    certificate: "platform",
+    resource_dirs: ["res"],
+    product_specific: true,
+    sdk_version: "current",
+}
