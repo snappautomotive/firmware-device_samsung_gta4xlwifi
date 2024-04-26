@@ -25,5 +25,5 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-        SnappCarFrameworkOverlay
+        SnappCarFrameworkOverlay \
         SnappCarSettingsProviderOverlay
