@@ -14,34 +14,20 @@
 # limitations under the License.
 #
 
-## Inherit from generic products, most specific first
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+# The first boot animation to be set wins
+OVERRIDE_BOOT_ANIMATION := true
+$(call inherit-product-if-exists, vendor/$(BUILD_VARIANT)/bootanimation/bootanimation.mk)
 
 ## Inherit from gta4xlwifi device
-$(call inherit-product, device/samsung/gta4xlwifi/device.mk)
-
-## Boot Animation
-TARGET_BOOTANIMATION_HALF_RES := true
-TARGET_SCREEN_HEIGHT := 2000
-TARGET_SCREEN_WIDTH := 1200
+$(call inherit-product, device/samsung/gta4xlwifi/lineage_gta4xlwifi.mk)
 
 # Inherit Snapp modifications
 $(call inherit-product, device/snappautomotive/common/additions.mk)
-
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_car.mk)
 $(call inherit-product, device/lineage/car/lineage_car_vendor.mk)
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_DEVICE := gta4xlwifi
-PRODUCT_NAME := lineage_car_gta4xlwifi
-PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-P610
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_SHIPPING_API_LEVEL := 29
-
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_NAME := lineage_gta4xlwifi_car
+PRODUCT_MODEL := SnappOS on SM-P610
